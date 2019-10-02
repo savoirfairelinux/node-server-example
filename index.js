@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const base64 = require("Base64");
 const express = require("express");
 const hello = require("bindings")("hello");
 const http = require("http");
@@ -15,6 +16,7 @@ app.use(express.static(documentRoot));
 app.get("/data", (req, res) => {
 	try {
 		res.status(200).send({
+			base64: base64.btoa("hello world"),
 			hello: hello.say_hello(),
 		});
 
