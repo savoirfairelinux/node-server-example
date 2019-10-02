@@ -1,0 +1,24 @@
+{
+	"name": "@savoirfairelinux/node-server-example",
+	"version": "1.0.1",
+	"description": "Node Server Example",
+	"homepage": "https://github.com/savoirfairelinux/node-server-example#readme",
+	"author": "Jean-Marie LEMETAYER <jean-marie.lemetayer@savoirfairelinux.com>",
+	"license": "MIT",
+	"keywords": [
+		"savoirfairelinux",
+		"yocto"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/savoirfairelinux/node-server-example.git"
+	},
+	"gypfile": true,
+	"bin": {
+		"node-server-example": "index.js"
+	},
+	"main": "index.js",
+	"dependencies": {
+		"express": "^4.17.1"
+	}
+}
