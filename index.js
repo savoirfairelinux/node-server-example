@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const express = require("express");
+const hello = require("bindings")("hello");
 const http = require("http");
 
 const documentRoot = process.env.DOCUMENT_ROOT || "/var/www";
@@ -14,6 +15,7 @@ app.use(express.static(documentRoot));
 app.get("/data", (req, res) => {
 	try {
 		res.status(200).send({
+			hello: hello.say_hello(),
 		});
 
 	} catch (error) {
